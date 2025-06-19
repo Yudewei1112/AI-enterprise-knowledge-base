@@ -1,0 +1,43 @@
+# Web框架和服务器
+fastapi==0.115.12
+uvicorn==0.34.2
+pydantic==2.11.3
+python-multipart==0.0.20
+
+# AI和机器学习
+#前两项是pytorch部分，cuda版本12.1，cpu版本2.5.1，如果cuda版本不同，需要修改
+#虽然sentence-transformers会自动安装pytorch，但是这里需要指定版本，否则GPU无法正常使用
+torch==2.5.1+cu121              
+torchvision==0.20.1+cu121       
+sentence-transformers==4.1.0
+faiss-cpu==1.10.0
+numpy==2.2.5
+openai==1.75.0
+fastmcp==2.5.1
+
+# HTTP客户端
+requests==2.32.3
+aiohttp==3.11.8
+
+# 文档处理
+PyPDF2==3.0.1
+pdfplumber==0.10.3
+pdf2image==1.17.0
+python-docx==1.1.2
+openpyxl==3.1.2
+pandas==2.2.3
+
+# 图像处理和OCR
+Pillow==10.2.0
+pytesseract==0.3.10
+
+# 数据库
+aiosqlite==0.20.0
+
+# 文本处理
+beautifulsoup4==4.13.4
+markdown==3.8
+python-dotenv==1.0.0
+
+# Windows COM支持 (仅Windows)
+pywin32==306
