@@ -696,12 +696,15 @@ async def generate_mcp_answer(client, query, conversation_context="", model_name
             if "server_url" in tool_call and "tool_name" in tool_call and "parameters" in tool_call:
                 print(f"🎯 准备调用工具: {tool_call['tool_name']}")
                 
-                # 根据服务器名称查找实际的URL
+                # 根据服务器名称查找实际的URL（支持大小写不敏感匹配）
                 server_name = tool_call["server_url"]
                 actual_server_url = None
                 for server_id, server_info in mcp_tools_cache.items():
-                    if server_info['server_name'] == server_name:
+                    # 支持大小写不敏感匹配和URL直接匹配
+                    if (server_info['server_name'].lower() == server_name.lower() or 
+                        server_info['server_url'] == server_name):
                         actual_server_url = server_info['server_url']
+                        print(f"🔍 匹配到服务器: {server_info['server_name']} -> {actual_server_url}")
                         break
                 
                 if actual_server_url is None:
