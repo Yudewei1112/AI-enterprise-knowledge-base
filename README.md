@@ -1,4 +1,4 @@
-# 企业文档知识库系统
+# 企业文档知识库RAG系统
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
@@ -6,7 +6,7 @@
 
 ## 📖 项目简介
 
-这是一个基于AI技术的企业文档知识库系统，支持多种文档格式的智能检索和问答。系统采用向量化技术对企业文档进行语义理解，提供精准的文档检索和智能问答服务。
+这是一个基于AI RAG技术的企业文档知识库系统，支持多种文档格式的智能检索和问答。系统采用向量化技术对企业文档进行语义理解，提供精准的文档检索和智能问答服务。
 
 **🎯 技术特色**：本系统AI应用部分完全纯原生实现，**未使用任何第三方AI框架**（如LangChain、LlamaIndex等），具有**高度自主性**和**灵活配置能力**，可根据业务需求进行深度定制和优化。
 
@@ -38,7 +38,7 @@
 - **语义搜索**: 基于FAISS向量数据库的高效语义检索
 - **相似度匹配**: 智能匹配用户查询与文档内容的语义相似度
 - **缓存优化**: 查询结果缓存机制，提升检索性能
-- **🎯 自主实现**: 向量化和检索算法完全自主开发，无第三方框架依赖
+- **🎯 技术栈**: 基于SentenceTransformer和FAISS构建的向量检索系统
 - **联网搜索**
 ![联网搜索](images/6-联网搜索.png)
 
@@ -57,7 +57,7 @@
 
 ### 🔧 MCP集成
 - **模型上下文协议**: 支持MCP(Model Context Protocol)标准
-- **工具扩展**: 内置天气查询、订单管理等示例工具
+- **工具扩展**: 内置天气查询示例工具
 - **服务管理**: 支持MCP服务器的动态管理和配置
 - **MCP天气查询**
 ![MCP天气查询](images/7-MCP-天气查询.png)
@@ -178,7 +178,7 @@ python main.py
 ### 模型配置
 系统支持多个AI模型，可在 `.env` 文件中配置：
 - **GLM-4-Plus**: 智谱AI的大语言模型
-- **DeepSeek**: DeepSeek的代码和推理模型
+- **DeepSeek-R1**: DeepSeek的最新推理模型
 - **Qwen**: 阿里云的通义千问模型
 - **Claude**: Anthropic的Claude模型
 
